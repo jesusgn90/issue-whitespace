@@ -1,0 +1,13 @@
+name: Test
+# Can be manually triggered
+on:
+  workflow_dispatch:
+jobs:
+  prepare_release:
+    runs-on: ubuntu-latest
+    env:
+     MY_VAR: ${{ secrets.SECRET_VAR }}
+    steps:
+    - name: run release prepare command for freetrial
+      run: |
+          echo "$MY_VAR"
