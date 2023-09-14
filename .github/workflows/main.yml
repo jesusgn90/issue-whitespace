@@ -10,4 +10,6 @@ jobs:
     steps:
     - name: run release prepare command for freetrial
       run: |
-          echo "$MY_VAR"
+          if [[ "$MY_VAR" == "secret value" ]];
+            echo "OK"
+          fi
